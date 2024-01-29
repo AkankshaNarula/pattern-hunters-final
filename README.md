@@ -13,7 +13,7 @@ Pattern Hunters is a browser extension designed to identify dark patterns on web
 
 ## Introduction
 
-Dark patterns are deceptive user interface elements designed to trick users into making unintended decisions. Pattern Hunters aims to detect and expose such dark patterns on websites.
+A dark pattern is a user interface carefully crafted to trick users into doing a certain action that they wouldn’t have done otherwise. Dark patterns are of many types such as forced action, nagging, confirm shaming, interface interference, false urgency, and basket sneaking to name a few. We aim to solve this problem by providing a solution that can detect dark patterns on various e-commerce digital platforms to keep our consumers safe through a browser extension by highlighting the dark patterns and providing the users with knowledge about them. It would help protect users from the malicious intentions of developers who aim to increase their profits through these malpractices. We aim to create a transparent digital world. 
 
 ## Directory structure
 ```bash
