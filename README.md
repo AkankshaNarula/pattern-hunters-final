@@ -7,7 +7,6 @@ Pattern Hunters is a browser extension designed to identify dark patterns on web
 - [Introduction](#introduction)
 - [Directory Structure](#directory-structure)
 - [Getting Started](#getting-started)
-- [Usage](#usage)
 - [Documentation](#documentation)
 - [Contributing](#contributing)
 
@@ -38,9 +37,18 @@ To get started with Pattern Hunters, follow these steps:
 1. Clone the repository: `git clone https://github.com/ItsPranavz/pattern-hunters.git`
 2. Install dependencies: `pip install -r requirements.txt`
 
-## Usage
+## Contributors
 
-Gaurav fill this Section please
+Thanks to all the wonderful people who contributed to this project!
+
+[![Contributors](https://img.shields.io/github/contributors/ItsPranavz/pattern-hunters)](https://github.com/ItsPranavz/pattern-hunters/graphs/contributors)
+
+- [Pranav Sharma](https://github.com/ItsPranavz)
+- [Akanksha Narula](https://github.com/AkankshaNarula)
+- [Arnav Singh](https://github.com/astra1503)
+- [Gurmehar Singh](https://github.com/GURMEHAR-PEC)
+- [Gaurav Gupta](https://github.com/GauravGupta993)
+
 
 ## Documentation
 
