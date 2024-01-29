@@ -15,14 +15,21 @@ Pattern Hunters is a browser extension designed to identify dark patterns on web
 
 Dark patterns are deceptive user interface elements designed to trick users into making unintended decisions. Pattern Hunters aims to detect and expose such dark patterns on websites.
 
-## Directory Structure
-
-- **Augmentation:** This module contains code for data augmentation using contextualized word embeddings.
-- **Dataset:** Holds the dataset in TSV format used for training the NLP model.
-- **Deliverables:** HTML, CSS, and JavaScript files of the browser extension.
-- **Models:** Contains pickled (.pkl) files of the trained NLP model.
-- **Scrapper:** Contains files for the web scraper extracting text from webpages.
-- **Training:** Code files used to train the NLP model.
+## Directory structure
+```bash
+├── Dark Pattern
+│   ├── Augmentation --> This module contains code for data augmentation using contextualized word embeddings.
+|   |
+│   ├── Dataset --> Holds the dataset in TSV format used for training the NLP model.
+|   |
+│   ├── Deliverables --> HTML, CSS, and JavaScript files of the browser extension.
+│   │   
+│   ├── Models --> Contains pickled (.pkl) files of the trained NLP model.
+|   |
+│   ├── Scrapper --> Contains files for the web scraper extracting text from webpages.
+|   |
+│   ├── Training --> Code files used to train the NLP model.
+```
 
 ## Getting Started
 
