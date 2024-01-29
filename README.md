@@ -52,7 +52,7 @@ Thanks to all the wonderful people who contributed to this project!
 
 ## Documentation
 
-Will update documentations once we are done with doc file
+(https://github.com/ItsPranavz/pattern-hunters/edit/main/documentation)
 
 ## Contributing
 
