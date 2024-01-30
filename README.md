@@ -7,6 +7,7 @@ Pattern Hunters is a browser extension designed to identify dark patterns on web
 - [Introduction](#introduction)
 - [Directory Structure](#directory-structure)
 - [Getting Started](#getting-started)
+- [Contributors](#contibutors)
 - [Documentation](#documentation)
 - [Contributing](#contributing)
 
