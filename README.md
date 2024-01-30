@@ -21,11 +21,13 @@ A dark pattern is a user interface carefully crafted to trick users into doing a
 |   |
 │   ├── Dataset --> Holds the dataset in TSV format used for training the NLP model.
 |   |
-│   ├── Deliverables --> HTML, CSS, and JavaScript files of the browser extension.
+│   ├── Extention --> HTML, CSS, and JavaScript files of the browser extension.
 │   │   
 │   ├── Models --> Contains pickled (.pkl) files of the trained NLP model.
 |   |
-│   ├── Scrapper --> Contains files for the web scraper extracting text from webpages.
+│   ├── Flask_backend_server
+│   |    ├──DPBHscrapper --> Contains files for the web scraper extracting text from webpages
+|   |    ├──app.py --> File to to run extention on local machine.
 |   |
 │   ├── Training --> Code files used to train the NLP model.
 ```
