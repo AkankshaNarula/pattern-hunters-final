@@ -13,7 +13,9 @@ Pattern Hunters is a browser extension designed to identify dark patterns on web
 
 ## Introduction
 
-A dark pattern is a user interface carefully crafted to trick users into doing a certain action that they wouldn’t have done otherwise. Dark patterns are of many types such as forced action, nagging, confirm shaming, interface interference, false urgency, and basket sneaking to name a few. We aim to solve this problem by providing a solution that can detect dark patterns on various e-commerce digital platforms to keep our consumers safe through a browser extension by highlighting the dark patterns and providing the users with knowledge about them. It would help protect users from the malicious intentions of developers who aim to increase their profits through these malpractices. We aim to create a transparent digital world. 
+A dark pattern is a user interface carefully crafted to trick users into doing a certain action that they wouldn’t have done otherwise. Dark patterns are of many types such as forced action, nagging, confirm shaming, interface interference, false urgency, and basket sneaking to name a few. We aim to solve this problem by providing a solution that can detect dark patterns on various e-commerce digital platforms to keep our consumers safe through a browser extension by highlighting the dark patterns and providing the users with knowledge about them. It would help protect users from the malicious intentions of developers who aim to increase their profits through these malpractices. We aim to create a transparent digital world.
+
+![[proposed-workflow.png]]
 
 ## Directory structure
 ```bash
@@ -26,7 +28,7 @@ A dark pattern is a user interface carefully crafted to trick users into doing a
 │   │   
 │   ├── Models --> Contains pickled (.pkl) files of the trained NLP model.
 |   |
-│   ├── Flask_backend_server
+│   ├── backend
 │   |    ├──DPBHscrapper --> Contains files for the web scraper extracting text from webpages
 |   |    ├──app.py --> File to to run extention on local machine.
 |   |
@@ -66,4 +68,3 @@ We welcome contributions! If you find a bug or have an idea for an enhancement, 
 3. Make your changes and commit them: `git commit -m 'Add new feature'`.
 4. Push your changes to the branch: `git push origin feature-name`.
 5. Submit a pull request.
-
