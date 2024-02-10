@@ -55,7 +55,7 @@ function displaySubscriptions() {
 
 function deleteSubscription(index) {
     subscriptions.splice(index, 1);
-    localStorage.setItem('subscriptions', JSON.stringify(subscriptions));
+    localStorage.setItem('subscriptions.json', JSON.stringify(subscriptions));
+    displaySubscriptions();
 }
 displaySubscriptions();
-
