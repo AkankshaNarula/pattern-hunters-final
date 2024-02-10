@@ -32,6 +32,10 @@
     "activeTab",
     "notifications",
     "contextMenus",
+    "notifications",
+        "storage",
+        "alarms",
+        "nativeMessaging",
     "https://*"
   ]
 }
