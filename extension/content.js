@@ -4,7 +4,7 @@
 
 const floatingButtonHTML = `
 <div id="floating-button">
-  <img id="my-floating-button" src="${chrome.runtime.getURL('owl.jpeg')}">
+  <img id="my-floating-button" src="${chrome.runtime.getURL('owl.png')}">
 </div>
 `;
 
@@ -27,10 +27,11 @@ const floatingButtonCSS = `
     bottom: 70px;
     right:40px;
     height: 80px;
-    width: 150px;
-    background-color: grey;
+    width: 155px;
+    background-color: #DBDBDB;
     border-radius:5px;
     font-size:15px;
+    padding: 6px;
 }
 `;
 
@@ -58,7 +59,7 @@ function injectFloatingButton() {
         let check=dark_patterns.detected;
         let string;
         if(check===true){
-            string="Dark Pattern Detected. \n Click on me to highlight them. ";
+            string="Dark Pattern Detected. \n Click on me to highlight. ";
         }
         else{
             string="No Dark Pattern Detected"
@@ -89,7 +90,7 @@ function Change_CSS(x,y,z) {
     // let Selector = "span.a-badge-text";
     Add_Custom_Style(`
             .DPBH {
-                background-color: #008dff !important;
+                background-color: #A5FFD6 !important;
             }
             .DPBH:hover .DP-Type{
                 display:inline ;
@@ -100,12 +101,10 @@ function Change_CSS(x,y,z) {
                 display:none;
                 margin-left:50px;
                 color:white;
-                font-size: 20px;
-                border: 2px solid red;
-                padding-bottom: 10px;
-                padding-top: 5px;
-                padding-left: 2px;
-                background-color:red;
+                font-size: 16px;
+                padding: 10px;
+                background-color:#FFA69E;
+                border-radius:4px;
             }
         `)
     // alert("Content script is working")

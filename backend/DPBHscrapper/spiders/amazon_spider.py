@@ -19,7 +19,7 @@ class AmazonSpider(scrapy.Spider):
                 '1': product.css("span.a-color-secondary::text").get(),
                 '1_selector': "span.a-color-secondary::text",
                 '2': product.css("span.a-badge-text::text").get(),
-                '3': product.css('span.a-text-normal::text').get()
+                '3': product.css('span.a-text-normal::text').get(),
                 '2_selector': "span.a-badge-text::text",
                 '3': product.css('span.a-text-normal::text').get(),
                 '3_selector' : "span.a-text-normal::text"
