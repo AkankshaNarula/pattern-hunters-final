@@ -49,8 +49,6 @@ To get started with Pattern Hunter, follow these steps:
 
 ## Contributors
 
-[![Contributors](https://img.shields.io/github/contributors/ItsPranavz/pattern-hunters)](https://github.com/ItsPranavz/pattern-hunters/graphs/contributors)
-
 - [Pranav Sharma](https://github.com/ItsPranavz)
 - [Akanksha Narula](https://github.com/AkankshaNarula)
 - [Arnav Singh](https://github.com/astra1503)
