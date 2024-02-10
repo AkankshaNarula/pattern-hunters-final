@@ -47,7 +47,7 @@ def send_email(subscription):
     except Exception as e:
         print('Error:', e)
 
-def main():
+def main(subscriptions):
     # while True:
     #     try:
             # message = json.loads(sys.stdin.readline())
