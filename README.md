@@ -29,23 +29,25 @@ A dark pattern is a user interface carefully crafted to trick users into doing a
 │   │   
 │   ├── Models --> Contains pickled (.pkl) files of the trained NLP model.
 |   |
-│   ├── backend
+│   ├── Backend
 │   |    ├──DPBHscrapper --> Contains files for the web scraper extracting text from webpages
 |   |    ├──app.py --> File to to run extention on local machine.
 |   |
 │   ├── Training --> Code files used to train the NLP model.
 ```
 
-## Getting Started
+## Installation
 
-To get started with Pattern Hunters, follow these steps:
+To get started with Pattern Hunter, follow these steps:
 
 1. Clone the repository: `git clone https://github.com/ItsPranavz/pattern-hunters.git`
 2. Install dependencies: `pip install -r requirements.txt`
+3. Change working directory `cd backend`
+4. Run backend server `python app.py`
+5. Load `extension` folder in your browser.
+6. Active the extension on your browser.
 
 ## Contributors
-
-Thanks to all the wonderful people who contributed to this project!
 
 [![Contributors](https://img.shields.io/github/contributors/ItsPranavz/pattern-hunters)](https://github.com/ItsPranavz/pattern-hunters/graphs/contributors)
 
@@ -59,16 +61,6 @@ Thanks to all the wonderful people who contributed to this project!
 ## Documentation
 
 (https://github.com/ItsPranavz/pattern-hunters/edit/main/documentation)
-
-## Contributing
-
-We welcome contributions! If you find a bug or have an idea for an enhancement, please open an issue. If you'd like to contribute code, follow these steps:
-
-1. Fork the repository.
-2. Create a new branch for your feature: `git checkout -b feature-name`.
-3. Make your changes and commit them: `git commit -m 'Add new feature'`.
-4. Push your changes to the branch: `git push origin feature-name`.
-5. Submit a pull request.
 
 ## Demonstration
 [View video demonstration of the project.](https://drive.google.com/file/d/1OIGqgTj8utMk471UxyuvoNg_nASMuEMF/view?usp=sharing)
