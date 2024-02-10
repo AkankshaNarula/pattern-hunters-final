@@ -7,14 +7,14 @@ import sys
 
 def check_subscriptions_and_send_reminders(subscriptions):
     for subscription in subscriptions:
-        purchase_date = datetime.strptime(subscription['date'], '%Y-%m-%d')
-        renewal_cycle = int(subscription['cycle'])
-        next_renewal_date = purchase_date + timedelta(days=renewal_cycle * 30)
+        # purchase_date = datetime.strptime(subscription['date'], '%Y-%m-%d')
+        # renewal_cycle = int(subscription['cycle'])
+        # next_renewal_date = purchase_date + timedelta(days=renewal_cycle * 30)
 
-        reminder_date = next_renewal_date - timedelta(days=1)
+        # reminder_date = next_renewal_date - timedelta(days=1)
 
-        if reminder_date.date() == datetime.now().date() + timedelta(days=1):
-            send_email(subscription)
+        # if reminder_date.date() == datetime.now().date() + timedelta(days=1):
+        send_email(subscription)
 
 def send_email(subscription):
     password = "fspo vwns rrko vohj"
@@ -48,14 +48,14 @@ def send_email(subscription):
         print('Error:', e)
 
 def main():
-    while True:
-        try:
-            message = json.loads(sys.stdin.readline())
-            if message.get('command') == 'checkSubscriptionsAndSendReminders':
-                subscriptions = message.get('subscriptions', [])
-                check_subscriptions_and_send_reminders(subscriptions)
-        except (ValueError, KeyError):
-            break
+    # while True:
+    #     try:
+            # message = json.loads(sys.stdin.readline())
+            # if message.get('command') == 'checkSubscriptionsAndSendReminders':
+            #     subscriptions = message.get('subscriptions', [])
+    check_subscriptions_and_send_reminders(subscriptions)
+        # except (ValueError, KeyError):
+        #     break
 
 
 if __name__ == '__main__':
