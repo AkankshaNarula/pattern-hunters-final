@@ -7,6 +7,18 @@ function redirectToForm() {
 
 let subscriptions = JSON.parse(localStorage.getItem('subscriptions.json')) || [];
 
+(async () => {
+    const response = await fetch('http://127.0.0.1:5000/email', {
+      method: 'POST',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({subscriptions})
+    });
+    let content = await response.json();
+    console.log(content);
+ })();
 
 function displaySubscriptions() {
     const jsonDataDiv = document.getElementById('jsonData');

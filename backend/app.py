@@ -3,6 +3,7 @@ from flask_cors import CORS
 import pickle
 import subprocess
 import pandas as pd
+import native_messaging_host
 
 app = Flask(__name__)
 CORS(app)
@@ -97,6 +98,13 @@ def data():
     if(len(list_of_items)>0):
        detected=True
     return jsonify(result=list_of_items,detected=True)
+
+@app.route('/email',methods = ['POST', 'GET'])
+def email():
+    subscriptions = request.get_json()
+    subscriptions=subscriptions['subscriptions']
+    native_messaging_host.main(subscriptions)
+    return jsonify(result="success")
 
 if __name__ == '__main__':
     app.run(debug=True)
