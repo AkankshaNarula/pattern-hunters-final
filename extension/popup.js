@@ -37,3 +37,20 @@ document.getElementById("manageSubscriptionsButton").addEventListener("click", r
 function redirectToSubscribe() {
   window.location.href = "subscribe.html";
 }
+function sendNativeMessage() {
+  const subscriptions = JSON.parse(localStorage.getItem('subscription.json'));
+
+  if (subscriptions) {
+      const port = browser.runtime.connectNative("com.example.subscription_reminder");
+      port.postMessage({ command: "checkSubscriptionsAndSendReminders", subscriptions: subscriptions });
+      port.onDisconnect.addListener(() => console.log("Disconnected from native messaging host"));
+  } else {
+      console.error("No subscriptions found in local storage");
+  }
+}
+
+sendNativeMessage();
+console.log("data sent")
+
+setInterval(sendNativeMessage, 24 * 60 * 60 * 1000); 
+
