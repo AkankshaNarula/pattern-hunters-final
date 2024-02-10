@@ -47,10 +47,34 @@ function injectFloatingButton() {
 
   // Add event listener to the button
   const floatingButton = document.getElementById('my-floating-button');
+  let messageBoxDisplayed = false;
+
   floatingButton.addEventListener('click', () => {
     // Handle button click event here
     const messageBox = document.getElementById('message-box');
     messageBox.style.display = messageBox.style.display === 'none' ? 'block' : 'none';
+    messageBoxDisplayed = !messageBoxDisplayed;
+
+    if (messageBoxDisplayed) {
+      setTimeout(() => {
+        messageBox.style.display = 'none';
+        messageBoxDisplayed = false;
+      }, 5000); // Hide the message box after 5 seconds
+    }
+  });
+
+  // Automatically display the message box when the user hovers over the button
+  floatingButton.addEventListener('mouseover', () => {
+    if (!messageBoxDisplayed) {
+      const messageBox = document.getElementById('message-box');
+      messageBox.style.display = 'block';
+      messageBoxDisplayed = true;
+
+      setTimeout(() => {
+        messageBox.style.display = 'none';
+        messageBoxDisplayed = false;
+      }, 5000); // Hide the message box after 5 seconds
+    }
   });
 }
 
