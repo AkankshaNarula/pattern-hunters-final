@@ -3,7 +3,9 @@
   "description": "Base Level Extension",
   "version": "1.0",
   "manifest_version": 3,
-  "host_premissions": "http://127.0.0.1:5000/*",
+  "host_permissions": [
+    "http://127.0.0.1:5000/*"
+  ],
   "action": {
     "default_popup": "dpbh.html",
     "default_icon": "img.png"
@@ -16,6 +18,16 @@
       "matches": ["https://*/*"],
       "css": ["content.css"],
       "js" : ["content.js"]
+    },
+    {
+      "matches": ["https://*/*"],
+      "js": ["floating_button.js"]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["owl.jpeg"],
+      "matches": ["<all_urls>"]
     }
   ],
   "permissions": [
