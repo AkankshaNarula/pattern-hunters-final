@@ -6,13 +6,16 @@
 
 <body>
   <div style="border: 5px; border-color: white;">
-    <h2>Dark Pattern Recognition</h2>
-
-    <input id="input" type="text" placeholder="Enter your text" class="input-box">
-
-    <button class="input-button" type="button" id="myButton">Submit</button>
-    <button class="input-button" type="button" id="manageSubscriptionsButton" onclick="redirectToSubscribe()">Manage Subscriptions</button>
-
+    <div class="header">
+      <img id="owl" src="owl.png">
+      <h2>Pattern Owl</h2>
+    </div>
+    <input id="input" type="text" placeholder="Enter text to check for dark patterns..." class="input-box">
+    <div class="buttonContainer">
+      <button class="input-button" type="button" id="myButton">Check Dark Patterns</button>
+      <button class="input-button" type="button" id="manageSubscriptionsButton" onclick="redirectToSubscribe()">Manage
+        Subscriptions</button>
+    </div>
     <p id="output" class="output-text"></p>
   </div>
   <script src="popup.js"></script>

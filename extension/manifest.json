@@ -1,5 +1,5 @@
 {
-  "name": "Dark Pattern Recognition Extensions",
+  "name": "Pattern Owl",
   "description": "Base Level Extension",
   "version": "1.0",
   "manifest_version": 3,
@@ -8,7 +8,7 @@
   ],
   "action": {
     "default_popup": "dpbh.html",
-    "default_icon": "img.png"
+    "default_icon": "owl.png"
   },
   "background": {
     "service_worker": "eventPage.js"
@@ -26,7 +26,7 @@
   ],
   "web_accessible_resources": [
     {
-      "resources": ["owl.jpeg"],
+      "resources": ["owl.png"],
       "matches": ["<all_urls>"]
     }
   ],

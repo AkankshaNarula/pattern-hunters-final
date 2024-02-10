@@ -1,6 +1,6 @@
 const floatingButtonHTML = `
 <div id="floating-button">
-  <img id="my-floating-button" src="${chrome.runtime.getURL('owl.jpeg')}">
+  <img id="my-floating-button" src="${chrome.runtime.getURL('owl.png')}">
 </div>
 <div id="message-box" style="display: none;">
   <p>Dark pattern detected</p>

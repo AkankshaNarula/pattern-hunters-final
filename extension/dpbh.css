@@ -31,59 +31,47 @@ body {
     }
 }
 
-.input-button{
-    display: inline-block;
-    outline: 0;
-    border: 0;
-    margin-left: 92px;
-    margin-top: 10px;
-    cursor: pointer;
-    transition: box-shadow 0.15s ease,transform 0.15s ease;
-    will-change: box-shadow,transform;
-    background: #FCFCFD;
-    box-shadow: 0px 2px 4px rgb(45 35 66 / 40%), 0px 7px 13px -3px rgb(45 35 66 / 30%), inset 0px -3px 0px #d6d6e7;
-    height: 48px;
-    padding: 0 32px;
-    font-size: 18px;
-    border-radius: 6px;
-    color: #36395a;
-    transition: box-shadow 0.15s ease,transform 0.15s ease;
-    :hover {
-        box-shadow: 0px 4px 8px rgb(45 35 66 / 40%), 0px 7px 13px -3px rgb(45 35 66 / 30%), inset 0px -3px 0px #d6d6e7;
-        transform: translateY(-2px);
-    }
-    :active{
-        box-shadow: inset 0px 3px 7px #d6d6e7;
-        transform: translateY(2px);
-    }
-    
-}
 h2 {
 	/* margin: 1em 0 0.5em 0; */
-    margin-left: auto;
-    margin-right: auto;
-	color: #343434;
+    margin-top: 20px;
+	color: #ffffff;
 	font-weight: normal;
-	font-family: 'Ultra', sans-serif;   
+    font-family: 'Courier New', Courier, monospace;  
 	font-size: 25px;
     text-align: center;
 	line-height: 42px;
 	text-transform: uppercase;
-	text-shadow: 0 2px white, 0 3px #777;
+	text-shadow: 0 2px rgb(225, 199, 199), 0 3px #777;
 }
 
-
+#input {
+    font-size: 12px;
+    margin-top: 10px;
+}
   
 .output-text{
     text-align: center;
-    font-size: 25px;
+    font-size: 18px;
     color: #ffffff;
 	font-weight: normal;
-	font-family: 'Ultra', sans-serif;   
+    font-family: Verdana, Geneva, Tahoma, sans-serif;  
     text-align: center;
 	line-height: 42px;
 	text-transform: uppercase;
 	text-shadow: 0 2px grey, 0 3px #777;
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+#owl {
+    height: 35px;
+    width: 32px;
+    margin: 10px;
 }
  
 label {
@@ -93,39 +81,37 @@ label {
     overflow: auto;
     height: 160px;
     width: 300px;
-   
-    
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
 }
+
+#purchaseDate {
+    margin-left: 12px;
+}
+
 .display_lst{
     color: #ffffff; 
-
-    
 }
 
-.input-button1{
-    display: inline-block;
-    outline: 0;
-    border: 0;
-    margin-left: 92px;
-    margin-top: 10px;
-    cursor: pointer;
-    transition: box-shadow 0.15s ease,transform 0.15s ease;
-    will-change: box-shadow,transform;
-    background: #FCFCFD;
-    box-shadow: 0px 2px 4px rgb(45 35 66 / 40%), 0px 7px 13px -3px rgb(45 35 66 / 30%), inset 0px -3px 0px #d6d6e7;
-    height: 28px;
-    padding: 0 32px;
-    font-size: 18px;
-    border-radius: 6px;
-    color: #36395a;
-    transition: box-shadow 0.15s ease,transform 0.15s ease;
-    :hover {
-        box-shadow: 0px 4px 8px rgb(45 35 66 / 40%), 0px 7px 13px -3px rgb(45 35 66 / 30%), inset 0px -3px 0px #d6d6e7;
-        transform: translateY(-2px);
-    }
-    :active{
-        box-shadow: inset 0px 3px 7px #d6d6e7;
-        transform: translateY(2px);
-    }
-    
+.buttonContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.input-button {
+    padding: 10px;
+    font-size: 16px;
+    margin: 15px;
+    width: 60%;
+    border-radius: 20px;
+}
+
+.lst_container::-webkit-scrollbar {
+    display: none;
+}
+
+.container {
+    margin-top: 30px;
 }
