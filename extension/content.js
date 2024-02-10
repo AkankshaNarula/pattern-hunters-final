@@ -1,20 +1,89 @@
 // const site = windows.location.hostname
 // console.log(site)
+// Define the HTML and CSS for the floating button
+
+const floatingButtonHTML = `
+<div id="floating-button">
+  <img id="my-floating-button" src="${chrome.runtime.getURL('owl.jpeg')}">
+</div>
+`;
+
+const floatingButtonCSS = `
+#floating-button {
+  position: fixed;
+  bottom: 20px;
+  right:20px;
+  z-index: 9999;
+}
+#my-floating-button {
+  width: 50px; /* Adjust width and height as needed */
+  height: 50px;
+  cursor: pointer;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+.Floating_Message{
+    position: fixed;
+    bottom: 70px;
+    right:40px;
+    height: 80px;
+    width: 150px;
+    background-color: grey;
+    border-radius:5px;
+    font-size:15px;
+}
+`;
+
+// Inject the HTML and CSS into the current webpage
+function injectFloatingButton() {
+    const floatingButtonContainer = document.createElement('div');
+    floatingButtonContainer.innerHTML = floatingButtonHTML;
+    document.body.appendChild(floatingButtonContainer);
+
+    const floatingButtonStyle = document.createElement('style');
+    floatingButtonStyle.textContent = floatingButtonCSS;
+    document.head.appendChild(floatingButtonStyle);
+
+    var displaydiv = document.createElement('div');
+    displaydiv.innerHTML = "Dark Pattern Detected";
+
+    const floatingButton = document.getElementById('my-floating-button');
+    displaydiv.classList.add("Floating_Message")
+    floatingButtonContainer.parentNode.insertBefore(displaydiv, floatingButtonContainer);
+
+    (async ()=> {
+        // console.log("WORKS");
+        const response = await fetch("http://127.0.0.1:5000/data");
+        const dark_patterns = await response.json();
+        let check=dark_patterns.detected;
+        let string;
+        if(check===true){
+            string="Dark Pattern Detected. \n Click on me to highlight them. ";
+        }
+        else{
+            string="No Dark Pattern Detected"
+        }
+        displaydiv.innerHTML=string
+        floatingButton.addEventListener('click', () => {
+            for(i in dark_patterns.result){
+                let text=dark_patterns.result[i][0];
+                let selector=dark_patterns.result[i][1].slice(0,-6);
+                let type=dark_patterns.result[i][3];
+                console.log(text+" "+selector+" "+type+"\n");
+                Change_CSS(selector,text,type);
+            }
+        });
+
+    })();
+    // Add event listener to the button
+
+}
+
+injectFloatingButton();
 
 // console.log("Injected to script: ")
 // alert("WORKS")
-(async ()=> {
-    // console.log("WORKS");
-    const response = await fetch("http://127.0.0.1:5000/data");
-    const dark_patterns = await response.json();
-    for(i in dark_patterns.result){
-        let text=dark_patterns.result[i][0];
-        let selector=dark_patterns.result[i][1].slice(0,-6);
-        let type=dark_patterns.result[i][3];
-        console.log(text+" "+selector+" "+type+"\n");
-        Change_CSS(selector,text,type);
-    }
-})();
+
 function Change_CSS(x,y,z) {
     const Add_Custom_Style = css => document.head.appendChild(document.createElement("style")).innerHTML = css
     // let Selector = "span.a-badge-text";
