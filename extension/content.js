@@ -46,7 +46,7 @@ function injectFloatingButton() {
     document.head.appendChild(floatingButtonStyle);
 
     var displaydiv = document.createElement('div');
-    displaydiv.innerHTML = "Dark Pattern Detected";
+    displaydiv.innerHTML = "Scanning...";
 
     const floatingButton = document.getElementById('my-floating-button');
     displaydiv.classList.add("Floating_Message")

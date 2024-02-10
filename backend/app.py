@@ -37,8 +37,8 @@ def url():
 
 @app.route('/data',methods = ['POST', 'GET'])
 def data():
-    # spider_name = "darkpatterns"
-    # subprocess.check_output(['scrapy', 'crawl', spider_name, "-O", "output.csv"])
+    spider_name = "darkpatterns"
+    subprocess.check_output(['scrapy', 'crawl', spider_name, "-O", "output.csv"])
     # with open("output.csv") as items_file:
     #     output= items_file.read()
     #     # df2= items_file.read()
