@@ -33,3 +33,7 @@ function myFunction() {
     document.getElementById("output").innerHTML = content.result;
   })();
 }
+document.getElementById("manageSubscriptionsButton").addEventListener("click", redirectToSubscribe)
+function redirectToSubscribe() {
+  window.location.href = "subscribe.html";
+}
