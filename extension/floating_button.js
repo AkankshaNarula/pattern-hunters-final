@@ -1,7 +1,9 @@
-// Define the HTML and CSS for the floating button
 const floatingButtonHTML = `
 <div id="floating-button">
   <img id="my-floating-button" src="${chrome.runtime.getURL('owl.jpeg')}">
+</div>
+<div id="message-box" style="display: none;">
+  <p>Dark pattern detected</p>
 </div>
 `;
 
@@ -20,6 +22,17 @@ const floatingButtonCSS = `
   border-radius: 50%;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
+
+#message-box {
+  position: fixed;
+  bottom: 70px; /* Adjust this value to position the box below the floating button */
+  right: 20px;
+  background-color: #f9f9f9;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  display: none; /* Hide the box by default */
+}
 `;
 
 // Inject the HTML and CSS into the current webpage
@@ -36,7 +49,8 @@ function injectFloatingButton() {
   const floatingButton = document.getElementById('my-floating-button');
   floatingButton.addEventListener('click', () => {
     // Handle button click event here
-    alert('Floating button clicked!');
+    const messageBox = document.getElementById('message-box');
+    messageBox.style.display = messageBox.style.display === 'none' ? 'block' : 'none';
   });
 }
 
